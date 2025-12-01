@@ -1,7 +1,7 @@
 
 ---
 layout: default
-title: Alex Weng - Resume
+title: CV
 permalink: /cv/
 ---
 ## Resume
