@@ -1,7 +1,6 @@
-
 ---
 layout: default
-title: CV
+title: Alex Weng - Resume
 permalink: /cv/
 ---
 ## Resume
@@ -14,7 +13,7 @@ permalink: /cv/
 ---
 
 #### Objective
-Aspiring engineering student with a strong foundation in mechanical design with aerospace applications and eager to apply my knowledge in real-world applications.
+I am an aspiring Mechanical Engineer with a strong foundation in mechanical design and eager to apply my knowledge in real-world applications.
 
 ---
 
@@ -22,10 +21,6 @@ Aspiring engineering student with a strong foundation in mechanical design with 
 - **Cornell University**  
   *Bachelor of Science in Mechanical and Aerospace Engineering*  
   GPA: 3.8/4.0 | Graduation: May, 2027
-
-- **[High School Name]**  
-  *High School Diploma*  
-  Graduation: [Month, Year]
 
 ---
 
