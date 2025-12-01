@@ -1,26 +1,27 @@
+
 ---
 layout: default
-title: <Your Name> - Curriculum Vitae
+title: Alex Weng - Resume
 permalink: /cv/
 ---
-## Curriculum Vitae
+## Resume
 
-[Download my CV]({{ "/assets/CV.pdf" | relative_url }}) in PDF format.
+[Download my Resume]({{ "/assets/Alex Weng Resume.pdf" | relative_url }}) in PDF format.
 
 
-**Email:** [netID@cornell.edu](mailto:netID@cornell.edu) | | | **Phone:** +123 456 7890
+**Email:** [akw76@cornell.edu](mailto:akw76@cornell.edu) | | | **Phone:** +862 206 0063
 
 ---
 
 #### Objective
-Aspiring engineering student with a strong foundation in.... Passionate about ... and eager to apply my knowledge in real-world applications.
+Aspiring engineering student with a strong foundation in mechanical design with aerospace applications and eager to apply my knowledge in real-world applications.
 
 ---
 
 #### Education
 - **Cornell University**  
   *Bachelor of Science in Mechanical and Aerospace Engineering*  
-  GPA: 3.8/4.0 | Graduation: Month, Year
+  GPA: 3.8/4.0 | Graduation: May, 2027
 
 - **[High School Name]**  
   *High School Diploma*  
