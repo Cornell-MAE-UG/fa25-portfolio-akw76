@@ -3,7 +3,7 @@ layout: project
 title: Custom GoPro Gimbal
 description: Advanced CAD Project
 technologies: SolidWorks, 3D Printing and Prototyping
-image: /assets/images/radio-machine-cad.jpg
+image: /assets/images/Gimbal 9-28 4.PNG
 ---
 
 Cornell University Unmanned Air Systems (CUAir) is a student-run engineering project team at Cornell University focused on developing a ten-foot wide autonomous unmanned aircraft for the AUVSI SUAS competition. 
@@ -14,5 +14,6 @@ The gimbal I designed is mounted on the underside of the fuselage. It has a cage
 
 Currently, I have 3D printed many iterations and have started the testing phase. I am working with our electrical subteam to test the servos in combination with the imu to ensure functionality. I’m also doing strength validation on the design on a test stand by simulating the forces the gimbal would experience during flight. I expect a final iteration to be wrapped up by the end of the semester. 
 
-![Shaded rendering of earlier version]({{ "/assets/images/radio-machine.jpg" | relative_url }}){: .inline-image-r style="width: 200px"}
+![CAD Image]({{ "assets/images/Gimbal 9-28 1.PNG" | relative_url }}){: width="600px" }
+![CAD Image]({{ "assets/images/Just Cage.PNG" | relative_url }}){: width="600px" }
 
