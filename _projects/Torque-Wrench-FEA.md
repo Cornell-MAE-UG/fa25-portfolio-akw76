@@ -35,7 +35,7 @@ Normal Strain along Y-axis
 6. Summarize results from FEM calculation showing maximum normal stress (anywhere), load point deflection, strains at the strain gauge locations <br>
 ![Stress Image]({{ "assets/images/Torque Wrench Normal Stress Drive.png" | relative_url }}){: width="600px" }
 ![Stress Image]({{ "assets/images/Torque Wrench Normal Stress Node.png" | relative_url }}){: width="600px" }
-![Stress Image]({{ "assets/images/Torque Wrench Total Deformation.png" | relative_url }}){: width="600px" }
+![Stress Image]({{ "assets/images/Torque-Wrench-Total-Deformation.png" | relative_url }}){: width="600px" }
 ![Strain Image]({{ "assets/images/Torque Wrench Strain Gauge.png" | relative_url }}){: width="600px" }
 The maximum normal stress on the torque wrench in the FEM is 27255 psi. However, this is at a stress concentration at the base of the drive. Along the torque wrench handle, the largest normal stress is 10581 psi. This is very close to our hand calculation, which was 10666.7 psi. 
 The load point deflection in the FEM was 0.46186 inches. Our hand calculation load point deflection was 0.3072. These are on the same order of magnitude, but just like in the baseline design, the FEM had a higher deflection due to fillets along the handle in the CAD file. 
