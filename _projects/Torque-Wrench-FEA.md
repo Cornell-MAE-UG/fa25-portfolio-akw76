@@ -3,7 +3,7 @@ layout: project
 title: Torque Wrench FEA
 description: Doing Ansys FEA on a torque wrench
 technologies: Ansys
-image: /assets/images/Torque-Wrench-Total-Deformation.png
+image: "/assets/images/Torque Wrench Total Deformation.png"
 ---
 
 I did FEA on a 600 lbf-in torque wrench that I designed. I worked my classmate Abigail Miller on this project. Here is my analysis. <br> <br> <br>
