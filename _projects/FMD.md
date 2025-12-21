@@ -6,10 +6,11 @@ technologies:
 image: "/assets/images/FMD-cover.png"
 ---
 
-Here is a link to a fluid mechanical dissection that I did on a Dirt Devil Vacuum. I worked with four of my classmates. <br><br>
+Here is a link to a fluid mechanical dissection that I did on a Dirt Devil Vacuum. I worked with four of my classmates. The project was to take apart the vacuum, figure out how it worked, and apply fluid mechanics concepts, equations, and strategies we learned throughout the semester to explaining how it worked at a high level. <br>
 <a href="https://youtu.be/rjccPkgYuuw" target="_blank">
 Watch the presentation on YouTube
 </a>
+<br>
 
 
 
