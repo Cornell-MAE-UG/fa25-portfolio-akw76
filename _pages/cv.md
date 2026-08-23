@@ -10,23 +10,19 @@ permalink: /cv/
 
 **Email:** [akw76@cornell.edu](mailto:akw76@cornell.edu) | | | **Phone:** +862 206 0063
 
----
-
-#### Objective
-I am an aspiring Mechanical Engineer with a strong foundation in mechanical design and eager to apply my knowledge in real-world applications.
 
 ---
 
 #### Education
 - **Cornell University**  
   *Bachelor of Science in Mechanical and Aerospace Engineering*  
-  GPA: 3.8/4.0 | Graduation: May 2027
+  GPA: 3.7/4.0 | Graduation: May 2027
 
 ---
 
 #### Skills
-- **Software:** SolidWorks, Autodesk Fusion 360, ANSYS (FEA/CFD/AQWA), Simulink
-- **Programming:** Python, MATLAB, Java
+- **Software:** SolidWorks, Autodesk Fusion 360, ANSYS (FEA/CFD/AQWA), Simulink, Linux OS, Easy5, Nastran, Patran
+- **Programming:** MATLAB, Java
 - **Tools:** 3D Printing, Laser Cutting, Dremel, Mill, Lathe
 
 ---
@@ -46,11 +42,11 @@ I am an aspiring Mechanical Engineer with a strong foundation in mechanical desi
   - Assembled full hydraulic testing system (6 valves, 9 sensors, 40+ fittings)
 
 
-  - **Hybrid Wind-Wave System Modeling:**
-    I analyzed architectures for combined wind turbine + wave-energy converter systems
-    - Simulated hybrid wind-wave energy converter dynamics using MATLAB, Wec-Sim, and ANSYS AQWA
-    - Modeled hydrodynamic bodies on CAD and evaluated stability and power capture efficiency of various architectures
-    - Built Simulink models of each configuration; wrote scripts in MATLAB to analyze their performance
+- **Hybrid Wind-Wave System Modeling:**
+  I analyzed architectures for combined wind turbine + wave-energy converter systems
+  - Simulated hybrid wind-wave energy converter dynamics using MATLAB, Wec-Sim, and ANSYS AQWA
+  - Modeled hydrodynamic bodies on CAD and evaluated stability and power capture efficiency of various architectures
+  - Built Simulink models of each configuration; wrote scripts in MATLAB to analyze their performance
 
 
 ---
