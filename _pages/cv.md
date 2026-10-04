@@ -8,7 +8,7 @@ permalink: /cv/
 [Download my Resume]({{ "/assets/Alex Weng Resume.pdf" | relative_url }}) in PDF format.
 
 
-**Email:** [akw76@cornell.edu](mailto:akw76@cornell.edu) | | | **Phone:** +862 206 0063
+**Email:** [akw76@cornell.edu](mailto:akw76@cornell.edu) | | | **Phone:** +1 862 206 0063
 
 
 ---
@@ -29,11 +29,11 @@ permalink: /cv/
 
 #### Projects
 - **Custom GoPro Gimbal:** 
-  I made a gimbal to be mounted on the bottom of a UAS. The gimbal uses an IMU to keep the GoPro pointed at the ground.   
+  I made a custom GoPro gimbal to be mounted on my project team's UAS. The gimbal uses an IMU to keep the camera pointed directly at the ground through roll and pitch maneauvers
   - Designed and fabricated GoPro gimbal (100° roll/pitch) achieving 60% weight and 55% torque reduction vs. prior model
-  - Modeled full assembly in SolidWorks; selected servos, bearings, and dowel pins for strength and manufacturability
-  - Integrated gimbal hardware with aircraft avionics; collaborated with electrical and imaging teams on interface design
-  - Manufactured and tested 4+ gimbal prototypes using 3D-printed and ordered parts, resolving issues related to GoPro fit, bearing motion, part connections, center of gravity of rotating parts, and space constraints within the aircraft
+  - Modeled full assembly in SolidWorks; selected servos, bearings, and screws for strength, manufacturability, and weight minimization
+  - Integrated gimbal hardware with aircraft avionics; collaborated with electrical and imaging teams on interface design and hardware requirements
+  - Manufactured and tested 4+ gimbal prototypes using 3D-printed and off the shelf parts, resolving issues related to GoPro fit, bearing motion, joints and connections, center of gravity of rotating parts, and bounding box constraints on the aircraft
 
 
 - **High Pressure Pretreatment Setup Design:** 
@@ -52,21 +52,21 @@ permalink: /cv/
 ---
 
 #### Work Experience
-- **[Company Name] - Intern**  
-  [Month, Year] - [Month, Year]  
-  - Responsibility 1  
-  - Responsibility 2  
+- **The Boeing Company - Loads and Dynamics Engineering Intern**  
+  May 2026 - August 2026 
+  - Established CG acceleration thresholds to waive unnecessary inspections after pilot-reported severe turbulence 
+  - Simulated aircraft response to wind gusts using Easy5 and internal Boeing tools on Linux HPC
+  - Conducted a survey of 10,000+ gust conditions utilizing a B737-MAX dynamic loads model
+  - Utilized Matlab to plot airplane CG response vs turbulence frequency and vs discrete gusts at various gust gradients
+  - Conducted parameter variation analyses to characterize growth rates of B737 horizontal stabilizer flutter modes
+  - Compared NG and MAX mode shapes and frequencies using NASTRAN models, visualized flutter modes on Patran
+
 
 ---
 
 #### Extracurricular Activities
 - Member of Cornell Unmanned Air Systems (Student Project Team) 
 - Vice-President and Captain for Cycling Club at Cornell
-- Volunteer mentor for Project Level the Field
-
----
-
-#### References
-Available upon request.
+- Campus Tour Guide
 
 ---
