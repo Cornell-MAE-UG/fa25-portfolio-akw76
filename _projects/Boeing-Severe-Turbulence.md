@@ -3,7 +3,7 @@ layout: project
 title: Boeing Loads and Dynamics Project
 description: Developing CG acceleration thresholds for critical dynamic loads due to turbulence
 technologies: 
-image: "/assets/images/CG Lateral Accel[_Usigma] vs Frequency (MAX 9) Weight Band_ Heavy Trend_ Mach.png"
+image: "/assets/images/max10-lateral-frequency.png"
 ---
 
 <div class="project-wide">
