@@ -4,6 +4,7 @@ title: Custom GoPro Gimbal for UAS
 description: Advanced CAD Project
 technologies: SolidWorks, 3D Printing and Prototyping
 image: /assets/images/Gimbal 9-28 4.PNG
+order: 2
 ---
 
 Cornell University Unmanned Air Systems (CUAir) is a student-run engineering project team at Cornell University focused on developing a fully autonomous VTOL UAS for search and rescue missions. 

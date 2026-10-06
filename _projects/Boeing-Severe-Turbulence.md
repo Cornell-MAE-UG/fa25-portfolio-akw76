@@ -4,6 +4,7 @@ title: Boeing Loads and Dynamics Project
 description: Developing CG acceleration thresholds for critical dynamic loads due to turbulence
 technologies: 
 image: "/assets/images/max10-lateral-frequency.png"
+order: 1
 ---
 
 <div class="project-wide">

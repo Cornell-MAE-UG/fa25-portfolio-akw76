@@ -4,6 +4,7 @@ title: Custom Bay Door for UAS
 description: Designed, manufactured, and tested a custom lightweight bay door for a search and rescue aircraft
 technologies: 
 image: "/assets/baydoorfullcad.png"
+order: 3
 ---
 
 <div class="project-wide">
