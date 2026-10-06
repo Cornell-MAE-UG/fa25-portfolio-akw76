@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Custom Bay Door for Unmanned Aerial System
+title: Custom Bay Door for UAS
 description: Designed, manufactured, and tested a custom lightweight bay door for a search and rescue aircraft
 technologies: 
 image: "/assets/images/FMD-cover.png"
