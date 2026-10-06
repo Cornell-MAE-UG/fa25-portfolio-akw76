@@ -6,199 +6,159 @@ technologies:
 image: "/assets/images/CG Lateral Accel[_Usigma] vs Frequency (MAX 9) Weight Band_ Heavy Trend_ Mach.png"
 ---
 
+<div class="project-wide">
+
 <h2>Severe Turbulence Inspection Threshold Development — Boeing 737 MAX</h2>
 
 <p>
 During my internship with Boeing's <strong>Loads and Dynamics</strong> group, I worked with
-the Dynamic Flight Loads team on a method to reduce unnecessary post-flight inspections
-following pilot-reported severe turbulence on the <strong>737 MAX 7, 9, and 10</strong>.
-The goal was to predict the aircraft's expected center-of-gravity (CG) response to
-FAA-defined design gusts and compare that response against the turbulence actually
-experienced in flight. This provided a physics-based way to determine whether an
-inspection could potentially be waived and the aircraft returned to service sooner.
+the Dynamic Flight Loads team to develop a method for reducing unnecessary aircraft
+inspections after pilot-reported severe turbulence on the <strong>737 MAX 7, 9, and 10</strong>.
+The goal was to compare the maximum CG acceleration measured during a turbulence event
+against a model-derived threshold. If the measured response remained below the threshold,
+the associated inspection could be waived; otherwise, inspection actions would be required.
+</p>
+
+<h3>Flight-Condition Modeling</h3>
+
+<p>
+I first built a representative set of flight conditions spanning the CG and gross-weight
+envelopes of each MAX minor model. After evaluating hundreds of fuel vectors, I selected
+approximately <strong>8–12 representative payload configurations per model</strong> and
+varied altitude, gross weight, and airspeed across each configuration. This produced
+approximately <strong>2,000 conditions per aircraft model</strong>.
 </p>
 
 <p>
-The project combined <strong>flight-condition sampling, aeroelastic modeling,
-controls simulation, structural dynamics, and large-scale MATLAB data processing</strong>.
-Across the three MAX minor models, I constructed and analyzed thousands of aircraft
-conditions and processed hundreds of response parameters over hundreds of gust inputs.
+I used Boeing's internal aeroelastic tools and Easy5 flight-control models to calculate
+aircraft loads and CG responses for these conditions. I wrote <strong>MATLAB scripts to
+generate model inputs, rewrite simulation input files, process results, and automate
+analysis</strong> across vertical and lateral discrete and continuous gust cases.
+Each condition contained more than <strong>600 response parameters</strong>, including
+responses across approximately <strong>250 continuous-gust frequencies</strong> and
+<strong>16 discrete-gust gradients</strong>.
 </p>
 
-<h3>Building the Flight-Condition Envelope</h3>
+<h3>Selecting the CG Response Metric</h3>
 
 <p>
-I first developed a sampling strategy to cover the aircraft's operational CG and gross-weight
-envelope without making the analysis computationally intractable. I evaluated hundreds of
-candidate fuel vectors and selected approximately <strong>8–12 representative payload
-configurations per minor model</strong> based on both operational frequency and envelope
-coverage.
+I analyzed the aircraft's low-frequency modes and frequency response to determine how CG
+acceleration should be measured. The rigid-body aircraft response occurred below
+<strong>2 Hz</strong>, while higher-frequency response increasingly contained structural
+bending effects. I therefore used a 2 Hz cutoff, which also aligned with the available
+flight-recorder sampling capability.
 </p>
 
-<p>
-Each payload configuration was expanded into a set of aircraft conditions using:
-</p>
+<div class="project-image-row">
 
-<ul>
-  <li><strong>Altitude:</strong> 0–40,000 ft in 5,000-ft increments</li>
-  <li><strong>Gross weight:</strong> 10,000-lb increments along each configuration's fuel vector</li>
-  <li><strong>Airspeed:</strong> 40-knot increments beginning near cruise, plus a case at maximum operating speed</li>
-</ul>
-
-<p>
-These increments were chosen to balance interpolation accuracy against model runtime and
-data volume. The resulting design space contained <strong>nearly 2,000 flight conditions
-per MAX minor model</strong>.
-</p>
-
-<h3>Aeroelastic and Flight-Control Modeling</h3>
-
-<p>
-For each condition, I used Boeing internal analysis tools and <strong>Easy5 flight-control
-models</strong> to calculate aircraft loads and CG responses. I wrote MATLAB scripts to
-automatically generate input tapes for an internal structural and aeroelastic model of the
-737 MAX. The resulting equations-of-motion matrices were then incorporated into the Easy5
-control-system model.
-</p>
-
-<p>
-I debugged and adapted the simulation workflow for the scope of the study, including
-separate analyses for <strong>vertical and lateral gusts</strong> and for both
-<strong>discrete and continuous gust inputs</strong>. Each simulation produced more than
-<strong>600 aircraft response parameters</strong> evaluated over approximately
-<strong>250 continuous-gust frequencies</strong> and <strong>16 discrete-gust gradients</strong>.
-</p>
-
-<p>
-I also examined the aircraft's eigenvalues and eigenmodes to understand its low-frequency
-structural bending behavior. Based on this analysis, I selected a <strong>2 Hz cutoff</strong>
-for the loads comparison: low-frequency rigid-body aircraft response is retained while
-higher-frequency structural bending response is conservatively excluded from the
-inspection metric.
-</p>
-
-<div style="display: flex; flex-wrap: wrap; gap: 24px; margin: 30px 0; align-items: flex-start;">
-
-  <figure style="flex: 1 1 460px; margin: 0;">
+  <figure>
     <img
-      src="{{ '/assets/images/CG Lateral Accel[_Usigma] vs Frequency (MAX 10) Weight Band_ Light Trend_ Mach.png' | relative_url }}"
-      alt="737 MAX 10 lateral CG acceleration response versus frequency"
-      style="width: 100%; height: auto; display: block;"
-    >
-    <figcaption style="font-size: 0.9em; line-height: 1.4; margin-top: 8px; color: #555;">
-      <strong>MAX 10 lateral gust frequency response.</strong>
-      CG acceleration response across hundreds of flight conditions, with the vertical
-      line marking the 2 Hz cutoff used to separate the low-frequency aircraft response
-      from higher-frequency structural dynamics. Curves are grouped by Mach regime.
+      src="{{ '/assets/images/max10-lateral-frequency.png' | relative_url }}"
+      alt="MAX 10 lateral CG acceleration versus frequency">
+    <figcaption>
+      <strong>MAX 10 lateral frequency response.</strong>
+      Each curve represents a flight condition. The vertical line marks the 2 Hz cutoff
+      used to capture rigid-body CG motion while excluding higher-frequency structural response.
     </figcaption>
   </figure>
 
-  <figure style="flex: 1 1 460px; margin: 0;">
+  <figure>
     <img
-      src="{{ '/assets/images/CG Lateral Accel[_Usigma] vs Frequency (MAX 9) Weight Band_ Heavy Trend_ Mach.png' | relative_url }}"
-      alt="737 MAX 9 lateral CG acceleration response versus frequency"
-      style="width: 100%; height: auto; display: block;"
-    >
-    <figcaption style="font-size: 0.9em; line-height: 1.4; margin-top: 8px; color: #555;">
-      <strong>MAX 9 lateral gust frequency response.</strong>
-      A corresponding heavy-weight analysis used to verify that the selected frequency
-      treatment remained conservative across aircraft weight and Mach conditions.
+      src="{{ '/assets/images/max9-lateral-frequency.png' | relative_url }}"
+      alt="MAX 9 lateral CG acceleration versus frequency">
+    <figcaption>
+      <strong>MAX 9 lateral frequency response.</strong>
+      The same analysis was repeated across aircraft weight, Mach, and flight-condition ranges
+      to verify the cutoff across the operating envelope.
     </figcaption>
   </figure>
 
 </div>
 
-<h3>Processing and Reducing the Simulation Data</h3>
+<h3>Reducing the Simulation Data</h3>
 
 <p>
-The largest technical challenge was reducing the volume of simulation output into a useful
-inspection criterion. I wrote MATLAB tooling to ingest the Easy5 results, convert them into
-structured <code>.mat</code> analysis tables, calculate derived metrics, and generate plots
-across aircraft model, weight, CG, Mach, altitude, impact pressure, and gust condition.
+I wrote MATLAB analysis tooling to convert the Easy5 outputs into structured
+<code>.mat</code> tables and evaluate trends across aircraft model, gross weight, CG,
+Mach, altitude, impact pressure, and gust condition. The analysis showed that
+<strong>CG acceleration provided a consistent metric for comparing gust severity</strong>,
+with clear trends across impact pressure and gross weight.
+</p>
+
+<div class="project-image-row">
+
+  <figure>
+    <img
+      src="{{ '/assets/images/max10-deltanz-qc.png' | relative_url }}"
+      alt="MAX 10 change in vertical CG acceleration versus impact pressure">
+    <figcaption>
+      <strong>MAX 10 vertical response.</strong>
+      Change in vertical CG acceleration versus impact pressure across representative
+      gross-weight conditions.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img
+      src="{{ '/assets/images/max9-deltanz-qc.png' | relative_url }}"
+      alt="MAX 9 change in vertical CG acceleration versus impact pressure">
+    <figcaption>
+      <strong>MAX 9 vertical response.</strong>
+      The response increases predictably with impact pressure while shifting with aircraft
+      gross weight.
+    </figcaption>
+  </figure>
+
+</div>
+
+<h3>Deriving the Inspection Threshold</h3>
+
+<p>
+The final challenge was reducing both continuous and discrete gust cases to a single
+inspection criterion. I compared the CG acceleration from the critical
+<strong>Time Domain Gust (TDG)</strong> with the response from the critical
+<strong>Power Spectral Density (PSD)</strong> continuous gust.
 </p>
 
 <p>
-I evaluated <strong>CG acceleration as the candidate inspection metric</strong> by studying
-how the simulated vertical and lateral responses changed across impact pressure and gross
-weight. The response showed a strong and predictable relationship with impact pressure,
-while weight-dependent trends could be captured explicitly in the threshold analysis.
+For the discrete case, I used the <strong>350-ft gust gradient</strong>, the largest
+gradient analyzed and theoretically the strongest discrete gust. Across the analyzed
+flight conditions, the critical TDG response remained greater than
+<strong>80% of the corresponding critical PSD response</strong>. This allowed the
+inspection logic to use one conservative threshold based only on the PSD response rather
+than maintaining separate criteria for the two gust types.
 </p>
 
-<figure style="margin: 32px auto; max-width: 1050px;">
+<figure>
   <img
-    src="{{ '/assets/images/_DeltaNz [TDG] vs Q_c (MAX 10).png' | relative_url }}"
-    alt="MAX 10 vertical CG acceleration response versus impact pressure"
-    style="width: 100%; height: auto; display: block;"
-  >
-  <figcaption style="font-size: 0.9em; line-height: 1.4; margin-top: 8px; color: #555;">
-    <strong>Vertical CG response versus impact pressure for the MAX 10.</strong>
-    The discrete-gust response increases systematically with impact pressure, with the
-    individual curves showing the effect of gross weight on the resulting acceleration.
-    Establishing these trends was important for determining whether CG acceleration could
-    serve as a stable inspection-threshold metric.
+    src="{{ '/assets/images/max7-deltanz-ratio.png' | relative_url }}"
+    alt="Ratio of TDG CG acceleration to PSD CG acceleration across impact pressure">
+
+  <figcaption>
+    <strong>TDG-to-PSD threshold validation for the MAX 7.</strong>
+    Each point is the ratio of CG acceleration from the critical 350-ft TDG to the
+    corresponding 2 Hz PSD response. All analyzed cases remain above the 0.80 threshold.
   </figcaption>
 </figure>
 
-<figure style="margin: 32px auto; max-width: 1050px;">
-  <img
-    src="{{ '/assets/images/_DeltaNz [TDG] vs Q_c (MAX 9).png' | relative_url }}"
-    alt="MAX 9 vertical CG acceleration response versus impact pressure"
-    style="width: 100%; height: auto; display: block;"
-  >
-  <figcaption style="font-size: 0.9em; line-height: 1.4; margin-top: 8px; color: #555;">
-    <strong>MAX 9 response across gross-weight conditions.</strong>
-    Thousands of simulation results were reduced into trend plots such as this one to
-    identify consistent relationships between gust severity, aircraft condition, and CG
-    response across the flight envelope.
-  </figcaption>
-</figure>
-
-<h3>Deriving and Validating the Inspection Threshold</h3>
-
 <p>
-The final step was determining whether a continuous-gust CG response could provide a
-conservative threshold for the discrete gust cases that drive structural loading. I compared
-the two response types across the full condition set and used ratio analyses and convex-hull
-visualizations to search for limiting cases.
+I also used <strong>convex-hull analysis</strong> to consolidate the individual flight
+conditions at each gross weight into conservative threshold lines, making the results
+suitable for interpolation across the aircraft operating envelope.
 </p>
-
-<p>
-The analysis showed that a threshold of <strong>80% of the CG acceleration produced by the
-design continuous-gust input</strong> remained below the critical discrete-gust responses
-across the analyzed conditions. This provided a conservative boundary that could be used
-to distinguish turbulence events that warranted further structural inspection from events
-whose measured response remained below the design-based criterion.
-</p>
-
-<figure style="margin: 32px auto; max-width: 1050px;">
-  <img
-    src="{{ '/assets/images/_DeltaNz Ratio [TDG (@350ft) _ PSD (@2Hz)] vs Q_c (MAX 7).png' | relative_url }}"
-    alt="Ratio of discrete gust response to continuous gust response for the MAX 7"
-    style="width: 100%; height: auto; display: block;"
-  >
-  <figcaption style="font-size: 0.9em; line-height: 1.4; margin-top: 8px; color: #555;">
-    <strong>Threshold validation for the MAX 7.</strong>
-    Each point compares a discrete-gust response with the corresponding 2 Hz continuous-gust
-    response across impact pressure and weight conditions. The dashed line marks the proposed
-    80% criterion; the analyzed cases remain above this boundary, supporting its use as a
-    conservative inspection threshold.
-  </figcaption>
-</figure>
 
 <h3>Outcome</h3>
 
 <p>
-By the end of the internship, I had developed an end-to-end workflow spanning
-<strong>flight-condition selection, model generation, controls and aeroelastic simulation,
-structural-dynamics verification, automated data reduction, and threshold validation</strong>.
-The work provided the Dynamic Flight Loads team with a technical basis for evaluating
-whether severe-turbulence events could be screened using measured CG response rather than
-automatically requiring the same level of post-flight inspection.
+The project produced candidate severe-turbulence inspection thresholds for all three
+737 MAX minor models and an analysis workflow spanning flight-condition selection,
+aeroelastic simulation, MATLAB data processing, and threshold validation.
 </p>
 
 <p>
-I documented the methodology, assumptions, and results in a <strong>Technical Design Review
-(TDR)</strong> and presented the work to Boeing technical fellows and subject-matter experts,
-where I received feedback on the modeling approach, frequency cutoff, and threshold
-selection.
+I presented the methodology and resulting thresholds in a
+<strong>Technical Design Review (TDR)</strong> to Boeing managers and subject-matter
+experts for technical review and potential implementation into aircraft software.
 </p>
+
+</div>

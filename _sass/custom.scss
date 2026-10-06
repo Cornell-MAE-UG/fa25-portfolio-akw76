@@ -200,4 +200,50 @@ footer {
   transform: translateX(-4px);
 }
 
+.project-wide {
+    width: min(1200px, calc(100vw - 48px));
+    max-width: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
 
+.project-wide p,
+.project-wide li {
+    line-height: 1.6;
+}
+
+.project-wide figure {
+    margin-top: 28px;
+    margin-bottom: 32px;
+}
+
+.project-wide figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #555;
+}
+
+.project-image-row {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.project-image-row figure {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-image-row img,
+.project-wide > figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 800px) {
+    .project-image-row {
+        flex-direction: column;
+    }
+}
