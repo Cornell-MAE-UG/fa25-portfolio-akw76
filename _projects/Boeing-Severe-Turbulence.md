@@ -14,7 +14,7 @@ order: 1
 <p>
 During my internship with Boeing's <strong>Loads and Dynamics</strong> group, I worked with
 the Dynamic Flight Loads team to develop a method for reducing unnecessary aircraft
-inspections after pilot-reported severe turbulence on the <strong>737 MAX 7, 9, and 10</strong>.
+inspections after pilot-reported severe turbulence on the <strong>737 MAX 7, 8, 9, and 10</strong>.
 The goal was to compare the maximum CG acceleration measured during a turbulence event
 against a model-derived threshold. If the measured response remained below the threshold,
 the associated inspection could be waived; otherwise, inspection actions would be required.
@@ -31,7 +31,7 @@ approximately <strong>2,000 conditions per aircraft model</strong>.
 </p>
 
 <p>
-I used Boeing's internal aeroelastic tools and Easy5 flight-control models to calculate
+I used Boeing's in-house tools and Easy5 models to calculate
 aircraft loads and CG responses for these conditions. I wrote <strong>MATLAB scripts to
 generate model inputs, rewrite simulation input files, process results, and automate
 analysis</strong> across vertical and lateral discrete and continuous gust cases.
@@ -151,9 +151,9 @@ suitable for interpolation across the aircraft operating envelope.
 <h3>Outcome</h3>
 
 <p>
-The project produced candidate severe-turbulence inspection thresholds for all three
+The project produced candidate severe-turbulence inspection thresholds for four
 737 MAX minor models and an analysis workflow spanning flight-condition selection,
-aeroelastic simulation, MATLAB data processing, and threshold validation.
+dynamic response simulation, MATLAB data processing, and threshold validation.
 </p>
 
 <p>

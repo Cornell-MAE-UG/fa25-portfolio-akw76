@@ -116,8 +116,8 @@ between flights.
 
   <figcaption>
     <strong>Prototype controls-integration test.</strong>
-    An early gimbal prototype responding to attitude changes as the IMU detects aircraft
-    orientation and the servos compensate in roll and pitch.
+    An early gimbal prototype mounted on the test stand I built. The IMU detects changes in
+    orientation and the servos compensate in roll and pitch. This testing was done with an electrical subteam member who designed a custom PCB for imu-servo integration. 
   </figcaption>
 
 </figure>
@@ -177,7 +177,7 @@ fully functional.
 The project took the gimbal from concept through <strong>CAD, actuator sizing, additive
 manufacturing, iterative prototyping, mechanical load testing, aircraft integration, and
 competition flight</strong>. Compared with the previous system, the final design reduced
-mass from 750 g to 210 g while lowering rotational inertia, reducing servo demand, and
+mass from 750 g to 210 g while lowering rotational inertia, reducing actuator demand, and
 improving camera serviceability.
 </p>
 

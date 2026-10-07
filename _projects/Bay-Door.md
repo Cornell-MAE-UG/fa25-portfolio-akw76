@@ -73,7 +73,7 @@ from the servo shaft.
 
 <p>
 Before fabrication, I performed hand calculations to estimate the aerodynamic drag force
-on the door and verify that the selected servo provided sufficient torque to operate the
+on the door due to expected wind gusts. I then verified that the selected servo provided sufficient torque to operate the
 mechanism under the expected load.
 </p>
 
@@ -87,9 +87,11 @@ servo and bearing, and integrated the completed assembly into the aircraft.
 </p>
 
 <p>
-To validate the actuation system, I used a <strong>force probe to apply load to the door</strong>
-while commanding it to open. This verified that the servo retained sufficient torque to
-operate the mechanism under applied force before the system was flown.
+To validate the actuation system, I performed a <strong>static equivalent load test</strong>.
+I calculated the aerodynamic force expected on the bay door and converted it to an equivalent
+hanging mass. With the door rotated 90° open, I suspended the mass from the door and verified
+that the servo could still close the full 90° against the applied load. This confirmed that
+the servo had sufficient torque to overcome the <strong>expected aerodynamic loading in flight</strong>.
 </p>
 
 <figure style="margin: 32px auto; max-width: 900px;">
