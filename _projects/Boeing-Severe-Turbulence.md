@@ -3,7 +3,7 @@ layout: project
 title: Boeing Loads and Dynamics Project
 description: Developing CG acceleration thresholds for critical dynamic loads due to turbulence
 technologies: 
-image: "/assets/images/737-10.png"
+image: "/assets/images/737-10.jpg"
 order: 1
 ---
 
