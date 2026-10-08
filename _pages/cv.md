@@ -5,7 +5,7 @@ permalink: /cv/
 ---
 ## Resume
 
-<a href="{{ '/assets/Alex Weng Resume.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Download my Resume</a> in PDF format.
+<a href="{{ '/assets/Alex-Weng-Resume.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Download my Resume</a> in PDF format.
 
 
 **Email:** [akw76@cornell.edu](mailto:akw76@cornell.edu) | | | **Phone:** +1 862 206 0063
